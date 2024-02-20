@@ -1,7 +1,7 @@
 dist: focal
 
 vm:
- size: [gpu-medium]
+ size: gpu-medium
 
 language: ruby
 rvm: 2.6.10
